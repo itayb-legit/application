@@ -1,0 +1,26 @@
+name: Application Workflow
+
+on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+  workflow_dispatch:
+
+jobs:
+    
+  build_lint_test:
+    uses: itayb-legit/common-workflows/.github/workflows/backend_test_and_build.yaml@main
+    with:
+      SHOULD_PUSH_SHARED_PACKAGE: true
+      SHOULD_CREATE_MIGRATION_SCRIPT: true
+      SHOULD_USE_TESTS_MATRIX: true
+      RESHARPER_VERSION: "2024.1.2"
+      DB_NAME: ScmDataManagement
+      TRIVY_IGNORE: |
+        CVE-2023-33170
+        CVE-2024-21392
+        CVE-2023-33170
+      DOTNET_VERSION: "8.0"
+      EF_TOOL_VERSION: "8.0.1"
+    secrets: inherit
