@@ -1,0 +1,9 @@
+deployment:
+  name: "cardsgame"
+  image: "itaybeyder/cards-game"
+  tag: "1"
+  replicas: 1
+  containerport: 8125
+namespace: "21game"
+ingress:
+  host: 21game.co.il

@@ -1,0 +1,8 @@
+Thank you for installing {{ .Chart.Name }}.
+Your release is named {{ .Release.Name }}.
+To Access the Game ( Via Minikube ) , Follow the following instructions:
+1) NodePort - minikube service {{ .Values.deployment.name }}-service -n {{ .Values.namespace }}
+2) Ingress 
+  - minikube addons enable ingress
+  - minkube ssh 
+  - run in the ssh ->  curl http://21game.co.il/
