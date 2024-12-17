@@ -8,3 +8,4 @@ deployment:
 namespace: "21game"
 ingress:
   host: 21game.co.il
+  # 
