@@ -2,7 +2,7 @@ deployment:
   name: "cardsgame"
   namespace: dev
   image: "itaybeyder/cards-game"
-    tag: "5"
+  tag: "5"
   replicas: 5
   containerport: 8125
 namespace: "21game"
