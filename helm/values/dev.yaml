@@ -3,7 +3,7 @@ deployment:
   namespace: dev
   image: "itaybeyder/cards-game"
   tag: "1"
-  replicas: 1
+  replicas: 5
   containerport: 8125
 namespace: "21game"
 ingress:
