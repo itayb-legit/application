@@ -1,5 +1,5 @@
 deployment:
-  name: "xxxxxxxxxxxx"
+  name: "cardsgame"
   namespace: prod
   image: "itaybeyder/cards-game"
   tag: "5"
